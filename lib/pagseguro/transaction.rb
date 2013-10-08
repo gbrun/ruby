@@ -130,7 +130,7 @@ module PagSeguro
 
     # Normalize the shipping object.
     def shipping=(shipping)
-      @shipping = nil #ensure_type(Shipping, shipping)
+      @shipping = ensure_type(Shipping, shipping)
     end
 
     # Hold the transaction's items.

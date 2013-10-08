@@ -111,6 +111,7 @@ module PagSeguro
 
     # Serialize the HTTP response into data.
     def self.load_from_response(response) # :nodoc:
+      p response
       if response.success?
         load_from_xml response.data.css("transaction").first
       else
